@@ -6,8 +6,9 @@ project (RunUnitTests)
 set (SOURCE_FILES test_foobar.cc)
 add_executable (${PROJECT_NAME} main.cc ${SOURCE_FILES})
 
+# Get the Engine include directories
 get_target_property (
-    MAIN_LIBRARY_INCLUDES ${CMAKE_PROJECT_NAME} 
+    MAIN_LIBRARY_INCLUDES TakarEngine
     INCLUDE_DIRECTORIES
     )
 
