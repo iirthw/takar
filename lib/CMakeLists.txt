@@ -7,8 +7,6 @@ include_directories (${OPENGL_INCLUDE_DIRS})
 
 # -----------------------------------------------------------------------------
 
-set (HEADER_FILES public/foobar/foobar.h)
-set (IMPL_FILES impl/foobar/foobar.cc)
 set (THIRD_PARTY_IMPL_FILES ../third-party/glad/src/glad.c)
 set (SOURCE_FILES ${HEADER_FILES} ${IMPL_FILES} ${THIRD_PARTY_IMPL_FILES})
 
