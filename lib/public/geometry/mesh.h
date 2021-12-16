@@ -12,7 +12,8 @@
 // http://www.open3d.org/docs/0.12.0/cpp_api/classopen3d_1_1geometry_1_1_mesh_base.html
 // http://www.open3d.org/docs/0.12.0/cpp_api/classopen3d_1_1geometry_1_1_triangle_mesh.html
 
-namespace urus {
+namespace tkr 
+{
     class AxisAlignedBoundingBox;
     class OrientedBoundingBox;
 
@@ -20,9 +21,11 @@ namespace urus {
 // Mesh
 // -----------------------------------------------------------------------------
 
-    class Mesh {
+    class Mesh 
+    {
     private:
-        struct MeshData {
+        struct MeshData 
+        {
             static const std::string kVerticesKey;
             static const std::string kVertexColorsKey;
             static const std::string kVertexNormalsKeys;
@@ -36,7 +39,8 @@ namespace urus {
             std::vector<mq::vec3> mVertexColors;
             std::vector<mq::vec3> mVertexNormals;
         };
-        struct MeshCache {
+        struct MeshCache 
+        {
 
         };
     public: 
@@ -82,7 +86,8 @@ namespace urus {
 // TriangleMesh
 // -----------------------------------------------------------------------------
 
-    class TriangleMesh : public Mesh {
+    class TriangleMesh : public Mesh 
+    {
     public:
         TriangleMesh(
             const std::vector<mq::vec3>& vertices,
@@ -124,4 +129,4 @@ namespace urus {
         std::vector<mq::ivec3> mTriangles; // triangles
     }; // class TriangleMesh
 
-} // namespace urus
+} // namespace tkr
