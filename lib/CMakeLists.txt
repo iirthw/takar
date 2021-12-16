@@ -9,6 +9,7 @@ include_directories (${OPENGL_INCLUDE_DIRS})
 
 set (HEADER_FILES 
 	 public/geometry/mesh.h
+	 public/rendering/node.h
 	 )
 set (IMPL_FILES impl/geometry/mesh.cpp)
 set (THIRD_PARTY_IMPL_FILES ../third-party/glad/src/glad.c)
