@@ -1,6 +1,3 @@
 [submodule "third-party/glfw"]
 	path = third-party/glfw
 	url = https://github.com/glfw/glfw
-[submodule "mq-math"]
-	path = mq-math
-	url = https://github.com/iirthw/mq-math
