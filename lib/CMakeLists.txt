@@ -30,3 +30,12 @@ target_include_directories (
     )
 
 # -----------------------------------------------------------------------------
+
+# To treat warning as error, uncomment the following:
+# if (MSVC)
+#   target_compile_options (TakarEngine PRIVATE /W4 /WX)
+# else ()
+#   target_compile_options (TakarEngine PRIVATE -Wall -Wextra -Wpedantic -Werror)
+# endif ()
+
+# -----------------------------------------------------------------------------

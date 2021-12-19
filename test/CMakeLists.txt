@@ -24,3 +24,10 @@ target_link_libraries (${PROJECT_NAME} ${CMAKE_PROJECT_NAME} gtest)
 #    ${CMAKE_CURRENT_SOURCE_DIR}/resources/simple.json 
 #    ${CMAKE_CURRENT_BINARY_DIR}/resources/simple.json COPYONLY
 # )
+
+# In order to treat warning as error, uncomment the following:
+# if (MSVC)
+#   target_compile_options (RunUnitTests PRIVATE /W4 /WX)
+# else ()
+#   target_compile_options (RunUnitTests PRIVATE -Wall -Wextra -Wpedantic -Werror)
+# endif ()
