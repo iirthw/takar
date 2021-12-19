@@ -1,6 +1,6 @@
 # Takar
 
-Initialize submodules:
+Start by initializing submodules:
 `git submodule update --init --recursive`
 
 ## Submodules
