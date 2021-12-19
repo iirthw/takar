@@ -24,8 +24,9 @@ target_include_directories (
     PUBLIC 
     ${CMAKE_CURRENT_SOURCE_DIR}/public
     # Third-party include directories
-    "../third-party/glfw/include"
     "../third-party/glad/include"
+    "../third-party/glfw/include"
+    "../third-party/mq-math/public"
     )
 
 # -----------------------------------------------------------------------------
