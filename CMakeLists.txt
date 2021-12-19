@@ -17,9 +17,10 @@ add_subdirectory (takar)
 add_subdirectory (test)
 
 # -----------------------------------------------------------------------------
-# glfw
+# Submodules
 # -----------------------------------------------------------------------------
 add_subdirectory (third-party/glfw)
+add_subdirectory (third-party/mq-math)
 
 # Turn off/on docs, tests, examples
 set (GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
