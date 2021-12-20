@@ -1,5 +1,6 @@
-#include "Mesh.h"
+#include "geometry/mesh.h"
 
+/*
 #include "engine/base/Macros.h"
 #include "BoundingBox.h"
 
@@ -147,3 +148,4 @@ namespace tkr
     }
 
 }; // namespace tkr
+*/

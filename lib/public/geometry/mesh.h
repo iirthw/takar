@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 
-#include "mqMath/Mat.h"
-#include "mqMath/Vec3.h"
+#include "mat.h"
+#include "vec3.h"
 
 // Inspired by mesh interfaces from Open3d.
 // Example, check out the following:
