@@ -12,6 +12,23 @@ set (HEADER_FILES
 	 public/rendering/node.h
 	 )
 set (IMPL_FILES impl/geometry/mesh.cpp)
+
+source_group (geometry
+    FILES
+    public/geometry/mesh.h
+    impl/geometry/mesh.cpp
+    )
+
+source_group (glad
+    FILES
+    ../third-party/glad/src/glad.c
+    )
+
+source_group (rendering
+    FILES
+    public/rendering/node.h
+    )
+
 set (THIRD_PARTY_IMPL_FILES ../third-party/glad/src/glad.c)
 set (SOURCE_FILES ${HEADER_FILES} ${IMPL_FILES} ${THIRD_PARTY_IMPL_FILES})
 
