@@ -44,6 +44,7 @@ target_include_directories (
     "../third-party/glad/include"
     "../third-party/glfw/include"
     "../third-party/mq-math/public"
+    "../third-party/stb_image_clone"
     )
 
 # -----------------------------------------------------------------------------

@@ -4,3 +4,6 @@
 [submodule "third-party/mq-math"]
 	path = third-party/mq-math
 	url = https://github.com/iirthw/mq-math
+[submodule "third-party/stb_image_clone"]
+	path = third-party/stb_image_clone
+	url = https://github.com/iirthw/stb_image_clone
