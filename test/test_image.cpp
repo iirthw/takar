@@ -23,5 +23,8 @@ protected:
 
 TEST(TestSuite1, TestCtor)
 {
-    ASSERT_TRUE(false);
+    tkr::Image img(2, 3);
+
+    ASSERT_EQ(img.width(), 2);
+    ASSERT_EQ(img.height(), 3);
 }
