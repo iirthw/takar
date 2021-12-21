@@ -17,7 +17,7 @@ target_include_directories (
     PUBLIC ${MAIN_LIBRARY_INCLUDES}
     )
     
-target_link_libraries (${PROJECT_NAME} ${CMAKE_PROJECT_NAME} gtest)
+target_link_libraries (${PROJECT_NAME} TakarEngine gtest)
 
 # Uncomment the following, if test resources are needed
 # configure_file (
