@@ -1,5 +1,7 @@
 #include "image.h"
 
+#include <cassert>
+#include <iostream>
 #include "stb_image.h"
 
 namespace tkr
@@ -32,5 +34,45 @@ namespace tkr
                 stbi_image_free(p);
         })
     {}
+
+    unsigned char Image::getPixel(int i, int j, int channel) const
+    {
+        assert(mData);
+        assert(mNumChannels > channel);
+
+        if (mNumChannels == 1) {
+            return mData.get()[i * mWidth + j];
+        }
+        else {
+            return mData.get()[(i * mWidth + j) * mNumChannels + channel];
+        }
+    }
+
+    void Image::setPixel(int i, int j, unsigned char value, int channel)
+    {
+        assert(mData);
+        assert(mNumChannels > channel);
+
+        if (mNumChannels == 1) {
+            mData.get()[i * mWidth + j] = value;
+        }
+        else {
+            mData.get()[(i * mWidth + j) * mNumChannels + channel] = value;
+        }
+    }
+
+#ifndef NDEBUG
+        void Image::print() const
+        {
+            for (int i = 0; i < mWidth; ++i) {
+                for (int j = 0; j < mHeight; ++j) {
+                    for (int c = 0; c < mNumChannels; ++c) {
+                        std::cout << getPixel(i, j, c) << ", ";
+                    }                    
+                }
+                std::cout << std::endl;
+            }
+        }
+#endif // !NDEBUG
 
 } // namespace tkr

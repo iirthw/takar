@@ -15,9 +15,17 @@ namespace tkr
         // Construct image from the given file.
         Image(int width, int height, int numChannels, const std::string& filename);
 
+        unsigned char getPixel(int i, int j, int channel = 0) const;
+        void setPixel(int i, int j, unsigned char value, int channel = 0);
+
         int width() const { return mWidth; }
         int height() const { return mHeight; }
-        int numChannels() const { return mNumChannels; }    
+        int numChannels() const { return mNumChannels; } 
+
+#ifndef NDEBUG
+        void print() const;
+#endif // !NDEBUG
+
 
     private:
 
