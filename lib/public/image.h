@@ -6,10 +6,13 @@
 
 namespace tkr
 {
-    /// RAII image wrapper.
+    /// RAII wrapper for a row-major image.
     class Image
     {        
     public:
+        /// Construct in-memory image of given dimensions and number of channels.
+        Image(int width, int height, int numChannels);
+        // Construct image from the given file.
         Image(int width, int height, int numChannels, const std::string& filename);
 
         int width() const { return mWidth; }
