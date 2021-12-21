@@ -11,7 +11,7 @@ namespace tkr
     {        
     public:
         /// Construct in-memory image of given dimensions and number of channels.
-        Image(int width, int height, int numChannels);
+        Image(int width, int height, int numChannels = 1);
         // Construct image from the given file.
         Image(int width, int height, int numChannels, const std::string& filename);
 
