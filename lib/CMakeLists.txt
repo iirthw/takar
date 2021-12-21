@@ -9,9 +9,20 @@ include_directories (${OPENGL_INCLUDE_DIRS})
 
 set (HEADER_FILES 
 	 public/geometry/mesh.h
+     public/image.h
 	 public/rendering/node.h
 	 )
-set (IMPL_FILES impl/geometry/mesh.cpp)
+
+set (IMPL_FILES
+    impl/geometry/mesh.cpp
+    impl/image.cpp
+    )
+
+source_group (TakarEngine
+    FILES
+    public/image.h
+    impl/image.cpp
+    )
 
 source_group (geometry
     FILES
