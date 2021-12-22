@@ -5,6 +5,7 @@ project (RunUnitTests)
 
 set (SOURCE_FILES test_image.cpp)
 add_executable (${PROJECT_NAME} main.cc ${SOURCE_FILES})
+add_executable (${PROJECT_NAME} main.cpp ${SOURCE_FILES})
 
 # Get the Engine include directories
 get_target_property (
