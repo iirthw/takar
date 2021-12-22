@@ -9,6 +9,7 @@ include_directories (${OPENGL_INCLUDE_DIRS})
 
 set (HEADER_FILES 
 	 public/geometry/mesh.h
+     public/geometry/sphere.h
      public/image.h
 	 public/rendering/node.h
 	 )
@@ -28,6 +29,7 @@ source_group (geometry
     FILES
     public/geometry/mesh.h
     impl/geometry/mesh.cpp
+    public/geometry/sphere.h
     )
 
 source_group (glad
