@@ -11,6 +11,7 @@ set (HEADER_FILES
 	 public/geometry/mesh.h
      public/geometry/sphere.h
      public/image.h
+     public/rendering/camera.h
 	 public/rendering/node.h
 	 )
 
@@ -39,6 +40,7 @@ source_group (glad
 
 source_group (rendering
     FILES
+    public/rendering/camera.h
     public/rendering/node.h
     )
 
