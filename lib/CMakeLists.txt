@@ -14,6 +14,7 @@ set (HEADER_FILES
      public/image.h
      public/rendering/camera.h
 	 public/rendering/node.h
+     public/rendering/path_tracer.h
 	 )
 
 set (IMPL_FILES
@@ -44,6 +45,7 @@ source_group (rendering
     FILES
     public/rendering/camera.h
     public/rendering/node.h
+    public/rendering/path_tracer.h
     )
 
 set (THIRD_PARTY_IMPL_FILES ../third-party/glad/src/glad.c)
