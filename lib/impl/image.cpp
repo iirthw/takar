@@ -70,10 +70,10 @@ namespace tkr
 #ifndef NDEBUG
         void Image::print() const
         {
-            for (int i = 0; i < mWidth; ++i) {
-                for (int j = 0; j < mHeight; ++j) {
+            for (int i = 0; i < mHeight; ++i) {
+                for (int j = 0; j < mWidth; ++j) {
                     for (int c = 0; c < mNumChannels; ++c) {
-                        std::cout << getPixel(i, j, c) << ", ";
+                        std::cout << static_cast<unsigned int>(getPixel(i, j, c)) << ", ";
                     }                    
                 }
                 std::cout << std::endl;
