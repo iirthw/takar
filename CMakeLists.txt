@@ -21,6 +21,7 @@ add_subdirectory (test)
 # -----------------------------------------------------------------------------
 add_subdirectory (third-party/glfw)
 add_subdirectory (third-party/mq-math)
+add_subdirectory (third-party/stb_image_clone)
 
 # Turn off/on docs, tests, examples
 set (GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
