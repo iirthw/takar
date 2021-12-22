@@ -7,7 +7,12 @@
 
 namespace tkr
 {
-    static auto imageDeleter = std::default_delete<unsigned char>();
+    void Image::imageDeleter(void* ptr)
+    {
+        assert(ptr);
+        if (ptr)
+            stbi_image_free(ptr);
+    }
 
     Image::Image(int width, int height, int numChannels)
     : mWidth(width)
@@ -15,7 +20,7 @@ namespace tkr
     , mNumChannels(numChannels)
     , mFilename("")
     , mData(new unsigned char[sizeof(unsigned char) * mWidth * mHeight * numChannels](), // value initialize to 0
-        reinterpret_cast<void(*)(unsigned char*)>(&imageDeleter)
+        reinterpret_cast<void(*)(unsigned char*)>(&Image::imageDeleter)
     )
     {}
 

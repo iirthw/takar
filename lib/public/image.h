@@ -26,8 +26,9 @@ namespace tkr
         void print() const;
 #endif // !NDEBUG
 
-
     private:
+        // Custom deleter.
+        static void imageDeleter(void* ptr);
 
         int mWidth;
         int mHeight;
