@@ -21,10 +21,18 @@ protected:
     // void TearDown() override {}
 };
 
-TEST(TestSuite1, TestCtor)
+TEST(TesImage, TestCtor)
 {
-    tkr::Image img(2, 3);
+    {
+        tkr::Image img(2, 3);
 
-    ASSERT_EQ(img.width(), 2);
-    ASSERT_EQ(img.height(), 3);
+        ASSERT_EQ(img.width(), 2);
+        ASSERT_EQ(img.height(), 3);        
+
+        for (int i = 0; i < img.height(); ++i) {
+            for (int j = 0; j < img.width(); ++j) {
+                ASSERT_EQ(img.getPixel(i, j), 0);
+            }
+        }
+    }
 }
