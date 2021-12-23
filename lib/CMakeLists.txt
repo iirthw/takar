@@ -8,10 +8,13 @@ include_directories (${OPENGL_INCLUDE_DIRS})
 # -----------------------------------------------------------------------------
 
 set (HEADER_FILES 
+     # geometry
 	 public/geometry/mesh.h
      public/geometry/rect.h
      public/geometry/sphere.h
+     # .
      public/image.h
+     # rendering
      public/rendering/camera.h
      public/rendering/color.h
 	 public/rendering/node.h
@@ -22,9 +25,12 @@ set (HEADER_FILES
 	 )
 
 set (IMPL_FILES
+    # geometry
     impl/geometry/mesh.cpp
     impl/geometry/rect.cpp
+    # .
     impl/image.cpp
+    # rendering
     impl/rendering/ray.cpp
     impl/rendering/viewport.cpp
     )
@@ -52,6 +58,7 @@ source_group (glad
 source_group (rendering
     FILES
     public/rendering/camera.h
+    impl/rendering/camera.cpp
     public/rendering/node.h
     public/rendering/path_tracer.h
     public/rendering/ray.h
