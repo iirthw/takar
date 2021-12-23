@@ -26,6 +26,7 @@ set (IMPL_FILES
     impl/geometry/rect.cpp
     impl/image.cpp
     impl/rendering/ray.cpp
+    impl/rendering/viewport.cpp
     )
 
 source_group (TakarEngine
@@ -54,6 +55,7 @@ source_group (rendering
     public/rendering/path_tracer.h
     public/rendering/renderable.h
     public/rendering/viewport.h
+    impl/rendering/viewport.cpp
     )
 
 set (THIRD_PARTY_IMPL_FILES ../third-party/glad/src/glad.c)
