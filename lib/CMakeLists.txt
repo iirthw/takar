@@ -21,6 +21,7 @@ set (HEADER_FILES
 set (IMPL_FILES
     impl/geometry/mesh.cpp
     impl/image.cpp
+    impl/rendering/ray.cpp
     )
 
 source_group (TakarEngine
