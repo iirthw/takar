@@ -1,4 +1,6 @@
-#include "rect.h"
+#include "geometry/rect.h"
+
+using namespace mq;
 
 namespace tkr
 {
@@ -9,7 +11,7 @@ namespace tkr
     , mHeight(height)
     {}
 
-    Rect::Rect(const mq::vec2& origin, float width, float height)
+    Rect::Rect(const vec2& origin, float width, float height)
     : Rect(origin.x, origin.y, width, height)
     {}
 } // namespace tkr

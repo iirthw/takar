@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vec2.h>
+#include "vec2.h"
 
 namespace tkr
 {
@@ -8,7 +8,7 @@ namespace tkr
     {
     public:
         Rect(float x, float y, float width, float height);
-        Rect(const mq::vec2& origin, float width, float height)
+        Rect(const mq::vec2& origin, float width, float height);
 
     private:
         float mX;
