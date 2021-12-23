@@ -8,13 +8,13 @@ include_directories (${OPENGL_INCLUDE_DIRS})
 # -----------------------------------------------------------------------------
 
 set (HEADER_FILES 
-	 public/geometry/mesh.h
-     public/geometry/ray.h
+	 public/geometry/mesh.h     
      public/geometry/sphere.h
      public/image.h
      public/rendering/camera.h
 	 public/rendering/node.h
      public/rendering/path_tracer.h
+     public/rendering/ray.h
      public/rendering/renderable.h
 	 )
 
