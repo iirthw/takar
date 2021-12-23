@@ -1,30 +1,16 @@
-#include "viewport.h"
+#include "rendering/viewport.h"
 
 #include <cassert>
+
+#include "mq.h"
 
 using namespace mq;
 
 namespace tkr {
 
     Viewport::Viewport(float aspect, float height)
-    : mAspect(apsect)
-    , mWidth(aspect * height)
-    , mHeight(height)
-    {
-        assert(!isZero(mAspect));
-    }
-
-    Viewport::Viewport(float apect, float width)
     : mAspect(aspect)
-    , mWidth(width)
-    , mHeight(!isZero(mAspect) ? mWidth / aspect : 0.0f)
-    {
-        assert(!isZero(mAspect));
-    }
-
-    Viewport::Viewport(float width, float height)
-    : mAspect(!isZero(height) ? width / height : 0.0f)
-    , mWidth(width)
+    , mWidth(aspect * height)
     , mHeight(height)
     {
         assert(!isZero(mAspect));
