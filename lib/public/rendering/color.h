@@ -2,4 +2,4 @@
 
 #include "vec3.h"
 
-typedef vec3 rgb;
+typedef vec3 rgb_t;
