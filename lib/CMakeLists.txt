@@ -12,6 +12,7 @@ set (HEADER_FILES
      public/geometry/sphere.h
      public/image.h
      public/rendering/camera.h
+     public/rendering/color.h
 	 public/rendering/node.h
      public/rendering/path_tracer.h
      public/rendering/ray.h
