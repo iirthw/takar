@@ -18,6 +18,7 @@ set (HEADER_FILES
      public/rendering/path_tracer.h
      public/rendering/ray.h
      public/rendering/renderable.h
+     public/rendering/viewport.h
 	 )
 
 set (IMPL_FILES
@@ -52,6 +53,7 @@ source_group (rendering
     public/rendering/node.h
     public/rendering/path_tracer.h
     public/rendering/renderable.h
+    public/rendering/viewport.h
     )
 
 set (THIRD_PARTY_IMPL_FILES ../third-party/glad/src/glad.c)
