@@ -39,7 +39,8 @@ source_group (geometry
     FILES
     public/geometry/mesh.h
     impl/geometry/mesh.cpp
-    public/geometry/ray.h
+    public/geometry/rect.h
+    impl/geometry/rect.cpp
     public/geometry/sphere.h
     )
 
@@ -53,6 +54,8 @@ source_group (rendering
     public/rendering/camera.h
     public/rendering/node.h
     public/rendering/path_tracer.h
+    public/rendering/ray.h
+    impl/rendering/ray.cpp
     public/rendering/renderable.h
     public/rendering/viewport.h
     impl/rendering/viewport.cpp
