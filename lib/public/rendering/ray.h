@@ -4,7 +4,7 @@
 
 namespace tkr
 {
-    class RayBase
+    class Ray
     {
     public:
         Ray(const mq::vec3& origin, const mq::vec3& direction);

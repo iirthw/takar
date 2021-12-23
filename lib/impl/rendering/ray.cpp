@@ -1,6 +1,6 @@
-#include "ray.h"
+#include "rendering/ray.h"
 
-using namespace mq3;
+using namespace mq;
 
 namespace tkr
 {
@@ -9,7 +9,7 @@ namespace tkr
     , mDirection(direction)
     {}
     
-    vec3 Ray::at(double t)
+    vec3 Ray::at(float t) const
     {
         return mOrigin + t * mDirection;
     }
