@@ -2,7 +2,7 @@
 
 #include "image.h"
 
-class TestSuite1 : public ::testing::Test {
+class TestImage : public ::testing::Test {
 public:
 
     static std::string workingDir()
@@ -21,7 +21,7 @@ protected:
     // void TearDown() override {}
 };
 
-TEST(TesImage, TestCtorDtor)
+TEST(TestImage, TestCtorDtor)
 {
     // Sanity check  for ctor and dtor.
     // Since the Image use custom deleter, dtor might crash if deleter is 
@@ -29,7 +29,7 @@ TEST(TesImage, TestCtorDtor)
     tkr::Image img(2, 2);
 }
 
-TEST(TesImage, TestCtor)
+TEST(TestImage, TestCtor)
 {
     tkr::Image img(2, 3);
 
@@ -43,7 +43,7 @@ TEST(TesImage, TestCtor)
     }
 }
 
-TEST(TesImage, TestSetPixel)
+TEST(TestImage, TestSetPixel)
 {
     {
         tkr::Image img(1, 1);
