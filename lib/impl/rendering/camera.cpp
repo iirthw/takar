@@ -1,7 +1,5 @@
 #include "rendering/camera.h"
 
-#include "rendering/viewport.h"
-
 using namespace mq;
 
 namespace tkr {

@@ -2,13 +2,14 @@
 
 #include <memory>
 
+#include "rendering/viewport.h"
 #include "vec3.h"
 
 namespace tkr {
     class Camera {
     public:
         Camera(std::shared_ptr<Viewport> viewport, const mq::vec3& origin, 
-            const mq::vec3& lookAt, const mq::vec3& up = vec3(0.0f, 1.0f, 0.0f));
+            const mq::vec3& lookAt, const mq::vec3& up = mq::vec3(0.0f, 1.0f, 0.0f));
 
         mq::vec3 origin() const { return mOrigin; }
         mq::vec3 lookAt() const { return mLookAt; }
