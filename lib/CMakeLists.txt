@@ -28,6 +28,7 @@ set (IMPL_FILES
     # geometry
     impl/geometry/mesh.cpp
     impl/geometry/rect.cpp
+    impl/geometry/sphere.cpp
     # .
     impl/image.cpp
     # rendering
@@ -49,6 +50,7 @@ source_group (geometry
     public/geometry/rect.h
     impl/geometry/rect.cpp
     public/geometry/sphere.h
+    impl/geometry/sphere.cpp
     )
 
 source_group (glad
