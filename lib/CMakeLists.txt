@@ -13,6 +13,7 @@ set (HEADER_FILES
      public/geometry/rect.h
      public/geometry/sphere.h
      public/geometry/triangle.h
+     public/geometry/voxel.h
      # .
      public/image.h
      # rendering
@@ -31,6 +32,7 @@ set (IMPL_FILES
     impl/geometry/rect.cpp
     impl/geometry/sphere.cpp
     impl/geometry/triangle.cpp
+    impl/geometry/voxel.cpp
     # .
     impl/image.cpp
     # rendering
@@ -55,6 +57,8 @@ source_group (geometry
     impl/geometry/sphere.cpp
     public/geometry/triangle.h
     impl/geometry/triangle.cpp
+    public/geometry/voxel.h
+    impl/geometry/voxel.cpp
     )
 
 source_group (glad
