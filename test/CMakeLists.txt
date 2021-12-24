@@ -3,7 +3,10 @@ include (${PROJECT_SOURCE_DIR}/cmake/download_gtest.cmake)
 
 project (RunUnitTests)
 
-set (SOURCE_FILES test_image.cpp)
+set (SOURCE_FILES 
+    test_image.cpp
+    test_rendering.cpp
+    )
 add_executable (${PROJECT_NAME} main.cpp ${SOURCE_FILES})
 
 # Get the Engine include directories
