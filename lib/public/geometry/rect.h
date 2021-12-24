@@ -13,6 +13,11 @@ namespace tkr {
         bool degenerate() const;
         float area() const;
 
+        float x() const { return mX; }
+        float y() const { return mY; }
+        float width() const { return mWidth; }
+        float height() const { return mHeight; }
+
     private:
 
         float mX;
