@@ -1,11 +1,14 @@
 #pragma once
 
+#include "rendering/renderable.h"
 #include "vec3.h"
 
 namespace tkr {
-    class Sphere {
+    class Sphere : Renderable {
     public:
         Sphere(const mq::vec3& center, float radius);
+
+        virtual bool rayIntersect(const Ray& ray) const;
 
         mq::vec3 center() const { return mCenter; }
         float radius() const { return mRadius; }
