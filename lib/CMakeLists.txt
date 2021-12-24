@@ -31,6 +31,7 @@ set (IMPL_FILES
     # .
     impl/image.cpp
     # rendering
+    impl/rendering/camera.cpp
     impl/rendering/ray.cpp
     impl/rendering/viewport.cpp
     )
