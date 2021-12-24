@@ -12,6 +12,7 @@ set (HEADER_FILES
 	 public/geometry/mesh.h
      public/geometry/rect.h
      public/geometry/sphere.h
+     public/geometry/triangle.h
      # .
      public/image.h
      # rendering
@@ -29,6 +30,7 @@ set (IMPL_FILES
     impl/geometry/mesh.cpp
     impl/geometry/rect.cpp
     impl/geometry/sphere.cpp
+    impl/geometry/triangle.cpp
     # .
     impl/image.cpp
     # rendering
@@ -51,6 +53,8 @@ source_group (geometry
     impl/geometry/rect.cpp
     public/geometry/sphere.h
     impl/geometry/sphere.cpp
+    public/geometry/triangle.h
+    impl/geometry/triangle.cpp
     )
 
 source_group (glad
