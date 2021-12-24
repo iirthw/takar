@@ -4,6 +4,7 @@ include (${PROJECT_SOURCE_DIR}/cmake/download_gtest.cmake)
 project (RunUnitTests)
 
 set (SOURCE_FILES 
+    test_geometry.cpp
     test_image.cpp
     test_rendering.cpp
     )
