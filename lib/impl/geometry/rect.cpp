@@ -4,8 +4,8 @@
 
 using namespace mq;
 
-namespace tkr
-{
+namespace tkr {
+
     Rect::Rect() : mX(0.0f), mY(0.0f), mWidth(0.0f), mHeight(0.0f) {}
 
     Rect::Rect(float x, float y, float width, float height)
@@ -28,4 +28,5 @@ namespace tkr
     {
         return mWidth * mHeight;
     }
+
 } // namespace tkr

@@ -2,10 +2,9 @@
 
 #include "vec2.h"
 
-namespace tkr
-{
-    class Rect
-    {
+namespace tkr {
+
+    class Rect {
     public:
         Rect();
         Rect(float x, float y, float width, float height);
@@ -20,5 +19,6 @@ namespace tkr
         float mY;
         float mWidth;
         float mHeight;
-    };
+    }; // class Rect
+
 } // namespace tkr
