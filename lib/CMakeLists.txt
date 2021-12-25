@@ -23,6 +23,7 @@ set (HEADER_FILES
      public/rendering/path_tracer.h
      public/rendering/ray.h
      public/rendering/renderable.h
+     public/rendering/scene.h
      public/rendering/viewport.h
 	 )
 
@@ -38,6 +39,7 @@ set (IMPL_FILES
     # rendering
     impl/rendering/camera.cpp
     impl/rendering/ray.cpp
+    impl/rendering/scene.cpp
     impl/rendering/viewport.cpp
     )
 
@@ -75,6 +77,8 @@ source_group (rendering
     public/rendering/ray.h
     impl/rendering/ray.cpp
     public/rendering/renderable.h
+    public/rendering/scene.h
+    impl/rendering/scene.cpp
     public/rendering/viewport.h
     impl/rendering/viewport.cpp
     )
