@@ -6,7 +6,7 @@ namespace tkr {
 
     class Ray {
     public:
-        Ray(const mq::vec3& origin, const mq::vec3& direction);
+        Ray(const mq::vec3& from, const mq::vec3& to);
 
         mq::vec3 at(float t) const;
         inline mq::vec3 origin() const { return mOrigin; }

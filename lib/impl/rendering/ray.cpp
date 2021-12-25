@@ -4,9 +4,9 @@ using namespace mq;
 
 namespace tkr
 {
-    Ray::Ray(const vec3& origin, const vec3& direction)
-    : mOrigin(origin)
-    , mDirection(direction)
+    Ray::Ray(const vec3& from, const vec3& to)
+    : mOrigin(from)
+    , mDirection(to - from)
     {}
     
     vec3 Ray::at(float t) const
