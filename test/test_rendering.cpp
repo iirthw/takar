@@ -3,6 +3,7 @@
 #include <memory>
 
 #include "rendering/camera.h"
+#include "rendering/ray.h"
 
 namespace tkr {
     namespace test {
@@ -40,4 +41,20 @@ TEST(TestCamera, TestCtor)
     auto camera = std::make_shared<Camera>(viewport, vec3{ 0.f, 0.f, 0.f }, vec3{ 0.f, 0.f, -1.f });
 
     ASSERT_TRUE(camera != nullptr);
+}
+
+TEST(TestRay, BasicTest)
+{
+    {
+        Ray ray(vec3(0.f, 0.f, 0.f), vec3(0.f, 0.f, -1.f));
+        ASSERT_EQ(ray.direction(), vec3(0.f, 0.f, -1.f));
+    }
+    {
+        Ray ray(vec3(1.f, 0.f, 0.f), vec3(0.f, 0.f, 1.f));
+        ASSERT_EQ(ray.direction(), vec3(-1.f, 0.f, 1.f));
+    }
+    {
+        Ray ray(vec3(10.f, 0.f, 0.f), vec3(1.f, 1.f, 1.f));
+        ASSERT_EQ(ray.direction(), vec3(-9.f, 1.f, 1.f));
+    }
 }
