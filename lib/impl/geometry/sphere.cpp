@@ -23,6 +23,6 @@ namespace tkr {
         const auto b = 2 * dot(p0 - mCenter, p1);
         const auto c = dot(p0 - mCenter, p0 - mCenter) - mRadius * mRadius;
 
-        return discriminant_squared<float>(a, b, c) >= 0;
+        return discriminantSquared<float>(a, b, c) >= 0;
     }
 } // namespace tkr
