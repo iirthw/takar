@@ -46,7 +46,7 @@ TEST(TestCamera, TestCtor)
 TEST(TestRay, BasicTest)
 {
     {
-        Ray ray(vec3(0.f, 0.f, 0.f), vec3(0.f, 0.f, -1.f));
+        Ray ray(vec3::getZero(), vec3(0.f, 0.f, -1.f));
         ASSERT_EQ(ray.direction(), vec3(0.f, 0.f, -1.f));
     }
     {

@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
 #include "geometry/rect.h"
+#include "geometry/sphere.h"
 #include "mq.h"
 
 using namespace mq;
@@ -49,5 +50,27 @@ TEST(TestRect, TestCtor)
 
         ASSERT_FALSE(rect.degenerate());
         ASSERT_EQ(rect.area(), 20.f);
+    }
+}
+
+TEST(TestSphere, IntersectionTest)
+{
+    {
+        Sphere s(vec3::getZero(), 1.f);
+        Ray ray(vec3(0.f, 0.f, 1.f), vec3(0.f, 0.f, -1.f));
+
+        ASSERT_TRUE(s.rayIntersect(ray));
+    }
+    {
+        Sphere s(vec3::getZero(), 1.f);
+        Ray ray(vec3(1.f, 1.f, 1.f), vec3(1.f, 1.f, 0.f));
+
+        ASSERT_FALSE(s.rayIntersect(ray));
+    }
+    {
+        Sphere s(vec3::getZero(), 1.f);
+        Ray ray(vec3(1.f, 1.f, 1.f), vec3(0.f, 0.f, 0.f));
+
+        ASSERT_TRUE(s.rayIntersect(ray));
     }
 }
