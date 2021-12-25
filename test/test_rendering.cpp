@@ -35,5 +35,9 @@ using namespace tkr;
 TEST(TestCamera, TestCtor)
 { 
     auto viewport = std::make_shared<Viewport>(16.f / 9.f, 128);
+    ASSERT_TRUE(viewport != nullptr);
+
     auto camera = std::make_shared<Camera>(viewport, vec3{ 0.f, 0.f, 0.f }, vec3{ 0.f, 0.f, -1.f });
+
+    ASSERT_TRUE(camera != nullptr);
 }
