@@ -2,10 +2,9 @@
 
 #include "vec3.h"
 
-namespace tkr
-{
-    class Ray
-    {
+namespace tkr {
+
+    class Ray {
     public:
         Ray(const mq::vec3& origin, const mq::vec3& direction);
 
