@@ -1,5 +1,6 @@
 #pragma once
 
+#include "rendering/ray.h"
 #include "rendering/renderable.h"
 #include "vec3.h"
 
