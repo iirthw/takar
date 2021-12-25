@@ -3,6 +3,7 @@
 #include <memory>
 
 #include "image.h"
+#include "scene.h"
 
 namespace tkr {
     class PathTracer {
