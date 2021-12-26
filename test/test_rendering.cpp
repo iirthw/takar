@@ -81,3 +81,13 @@ TEST(TestPathTracer, TestCtor)
     auto pathTracer = TestRendering::buildTestPathTracer();
     ASSERT_TRUE(pathTracer != nullptr);
 }
+
+TEST(TestPathTracer, TestRendering)
+{
+    auto pathTracer = TestRendering::buildTestPathTracer();
+    ASSERT_TRUE(pathTracer != nullptr);
+
+    auto renderedImage = pathTracer->renderToImage();
+    ASSERT_EQ(renderedImage.height(), 128);
+    ASSERT_EQ(renderedImage.width(), 227);
+}
