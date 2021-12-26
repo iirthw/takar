@@ -17,6 +17,8 @@ namespace tkr {
         void setOrigin(const mq::vec3& origin) { mOrigin = origin; }
         void setLookAt(const mq::vec3& lookAt) { mLookAt = lookAt; }
 
+        std::shared_ptr<Viewport> viewport() const { return mViewport; }
+
     private:
         std::shared_ptr<Viewport> mViewport;
         mq::vec3 mOrigin;
