@@ -38,6 +38,7 @@ set (IMPL_FILES
     impl/image.cpp
     # rendering
     impl/rendering/camera.cpp
+    impl/rendering/node.cpp
     impl/rendering/path_tracer.cpp
     impl/rendering/ray.cpp
     impl/rendering/scene.cpp
@@ -74,6 +75,7 @@ source_group (rendering
     public/rendering/camera.h
     impl/rendering/camera.cpp
     public/rendering/node.h
+    impl/rendering/node.cpp
     public/rendering/path_tracer.h
     impl/rendering/path_tracer.cpp
     public/rendering/ray.h
