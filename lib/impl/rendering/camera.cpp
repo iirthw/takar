@@ -3,11 +3,13 @@
 using namespace mq;
 
 namespace tkr {
-    Camera::Camera(std::shared_ptr<Viewport> viewport, const vec3& origin,
-        const vec3& lookAt, const vec3& up)
-    : mViewport(viewport)
-    , mOrigin(origin)
+    Camera::Camera(const vec3& origin, const vec3& lookAt, float fov,
+        float near, float far, const vec3& up)
+    : mOrigin(origin)
     , mLookAt(lookAt)
+    , mFov(fov)
+    , mNear(near)
+    , mFar(far)
     , mUp(up)
     {}
     
