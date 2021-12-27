@@ -5,9 +5,9 @@
 #include "vec3.h"
 
 namespace tkr {
-    class Camera {
+    class PerspectiveCamera {
     public:
-        Camera(const mq::vec3& origin, const mq::vec3& lookAt, float fov,
+        PerspectiveCamera(const mq::vec3& origin, const mq::vec3& lookAt, float fov,
          float near = 1, float far = 1024, const mq::vec3& up = mq::vec3(0.0f, 1.0f, 0.0f));
 
         mq::vec3 origin() const { return mOrigin; }

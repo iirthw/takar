@@ -3,7 +3,7 @@
 using namespace mq;
 
 namespace tkr {
-    Camera::Camera(const vec3& origin, const vec3& lookAt, float fov,
+    PerspectiveCamera::PerspectiveCamera(const vec3& origin, const vec3& lookAt, float fov,
         float near, float far, const vec3& up)
     : mOrigin(origin)
     , mLookAt(lookAt)
