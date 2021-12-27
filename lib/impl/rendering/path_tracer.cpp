@@ -11,7 +11,16 @@ Image PathTracer::renderToImage() const
 {
     // TODO: provide impl
     auto viewport = mCamera->viewport();
-    Image img(viewport->width(), viewport->height());
+    const auto width = viewport->width();
+    const auto height = viewport->height();
+    Image img(width, height);
+
+    for (int yi = 0; yi < height; ++yi) {
+        for (int xj = 0; xj < width; ++xj) {
+            const auto pixelValue = static_cast<char>(255 * static_cast<int>(std::floor(yi / height)));
+            img.setPixel(yi, xj, pixelValue);
+        }
+    }
 
     // auto node = mScene->node();
     // const auto renderables = node->renderables();
