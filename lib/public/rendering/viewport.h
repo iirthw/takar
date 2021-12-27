@@ -6,19 +6,19 @@ namespace tkr {
 
     class Viewport {
     public:
-        Viewport(float aspect, float height);
+        Viewport(float aspect, int height);
 
         float aspect() const { return mAspect; }
-        float width() const { return mWidth; }
-        float height() const { return mHeight; }
+        int width() const { return mWidth; }
+        int height() const { return mHeight; }
         
-        void setWidth(float width);
-        void setHeight(float height);
+        void setWidth(int width);
+        void setHeight(int height);
 
     private:
         float mAspect;
-        float mWidth;
-        float mHeight;
+        int mWidth;
+        int mHeight;
     }; // class Viewport    
 
 } // namespace tkr
