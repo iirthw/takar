@@ -2,7 +2,7 @@
 
 using namespace tkr;
 
-PathTracer::PathTracer(std::shared_ptr<Scene> scene, std::shared_ptr<Camera> camera)
+PathTracer::PathTracer(std::shared_ptr<Scene> scene, std::shared_ptr<PerspectiveCamera> camera)
 : mScene(scene)
 , mCamera(camera)
 {}
@@ -10,6 +10,15 @@ PathTracer::PathTracer(std::shared_ptr<Scene> scene, std::shared_ptr<Camera> cam
 Image PathTracer::renderToImage() const
 {
     // TODO: provide impl
-    Image img(1, 1);
+    auto viewport = mCamera->viewport();
+    Image img(viewport->width(), viewport->height());
+
+    // auto node = mScene->node();
+    // const auto renderables = node->renderables();
+    // for (auto renderable : renderables) {
+    // 
+    //     renderable->rayIntersect
+    // }
+
     return img;
 }

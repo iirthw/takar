@@ -3,9 +3,11 @@
 using namespace mq;
 
 namespace tkr {
-    PerspectiveCamera::PerspectiveCamera(const vec3& origin, const vec3& lookAt, float fov,
+    PerspectiveCamera::PerspectiveCamera(std::shared_ptr<Viewport> viewport,
+        const vec3& origin, const vec3& lookAt, float fov,
         float near, float far, const vec3& up)
-    : mOrigin(origin)
+    : mViewport(viewport)
+    , mOrigin(origin)
     , mLookAt(lookAt)
     , mFov(fov)
     , mNear(near)

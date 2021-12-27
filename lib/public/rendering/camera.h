@@ -1,14 +1,20 @@
 #pragma once
 
+#define _USE_MATH_DEFINES
+#include <math.h> // Must be a first include in the file which is disagreeable.
+
 #include <memory>
 
+#include "rendering/viewport.h"
 #include "vec3.h"
 
 namespace tkr {
     class PerspectiveCamera {
     public:
-        PerspectiveCamera(const mq::vec3& origin, const mq::vec3& lookAt, float fov,
-         float near = 1, float far = 1024, const mq::vec3& up = mq::vec3(0.0f, 1.0f, 0.0f));
+        PerspectiveCamera(std::shared_ptr<Viewport> viewport, 
+            const mq::vec3& origin, const mq::vec3& lookAt,
+            float fov = M_PI / 4, float near = 1, float far = 1024, 
+            const mq::vec3& up = mq::vec3(0.0f, 1.0f, 0.0f));
 
         mq::vec3 origin() const { return mOrigin; }
         mq::vec3 lookAt() const { return mLookAt; }
@@ -16,7 +22,10 @@ namespace tkr {
         void setOrigin(const mq::vec3& origin) { mOrigin = origin; }
         void setLookAt(const mq::vec3& lookAt) { mLookAt = lookAt; }
 
+        std::shared_ptr<Viewport> viewport() const { return mViewport; }
+
     private:
+        std::shared_ptr<Viewport> mViewport;
         mq::vec3 mOrigin;
         mq::vec3 mLookAt;
         float mFov;

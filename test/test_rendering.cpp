@@ -45,7 +45,7 @@ std::shared_ptr<PathTracer> TestRendering::buildTestPathTracer()
     auto scene = std::make_shared<Scene>(node);
 
     auto viewport = std::make_shared<Viewport>(16.f / 9.f, 128);
-    auto camera = std::make_shared<Camera>(viewport, vec3(0.f, 0.f, 1.f), vec3::getZero());
+    auto camera = std::make_shared<PerspectiveCamera>(vec3(0.f, 0.f, 1.f), vec3::getZero());
 
     return std::make_shared<PathTracer>(scene, camera);
 }
@@ -55,7 +55,7 @@ TEST(TestCamera, TestCtor)
     auto viewport = std::make_shared<Viewport>(16.f / 9.f, 128);
     ASSERT_TRUE(viewport != nullptr);
 
-    auto camera = std::make_shared<Camera>(viewport, vec3{ 0.f, 0.f, 0.f }, vec3{ 0.f, 0.f, -1.f });
+    auto camera = std::make_shared<PerspectiveCamera>(viewport, vec3{ 0.f, 0.f, 0.f }, vec3{ 0.f, 0.f, -1.f });
 
     ASSERT_TRUE(camera != nullptr);
 }

@@ -9,13 +9,13 @@
 namespace tkr {
     class PathTracer {
     public:
-        PathTracer(std::shared_ptr<Scene> scene, std::shared_ptr<Camera> camera);
+        PathTracer(std::shared_ptr<Scene> scene, std::shared_ptr<PerspectiveCamera> camera);
 
         Image renderToImage() const;
 
     private:
         std::shared_ptr<Scene> mScene;
-        std::shared_ptr<Camera> mCamera;
+        std::shared_ptr<PerspectiveCamera> mCamera;
     }; // class PathTracer
 
 } // namespace tkr
