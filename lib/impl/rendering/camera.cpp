@@ -1,5 +1,7 @@
 #include "rendering/camera.h"
 
+#include "vec3.h"
+
 using namespace mq;
 
 namespace tkr {
@@ -14,5 +16,10 @@ namespace tkr {
     , mFar(far)
     , mUp(up)
     {}
+
+    Ray rayThroughPixel(int row, int column) const
+    {
+        return Ray(vec3::zero(), vec3{1.f, 0.f, 0.f});
+    }
     
 } // namespace tkr

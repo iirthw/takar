@@ -5,6 +5,7 @@
 
 #include <memory>
 
+#include "rendering/ray.h"
 #include "rendering/viewport.h"
 #include "vec3.h"
 
@@ -15,6 +16,8 @@ namespace tkr {
             const mq::vec3& origin, const mq::vec3& lookAt,
             float fov = M_PI / 4, float near = 1, float far = 1024, 
             const mq::vec3& up = mq::vec3(0.0f, 1.0f, 0.0f));
+
+        Ray rayThroughPixel(int row, int column) const;
 
         mq::vec3 origin() const { return mOrigin; }
         mq::vec3 lookAt() const { return mLookAt; }
