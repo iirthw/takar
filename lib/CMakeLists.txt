@@ -11,6 +11,7 @@ set (HEADER_FILES
      # geometry
 	 public/geometry/mesh.h
      public/geometry/rect.h
+     public/geometry/quad.h
      public/geometry/sphere.h
      public/geometry/triangle.h
      public/geometry/voxel.h
@@ -30,6 +31,7 @@ set (HEADER_FILES
 set (IMPL_FILES
     # geometry
     impl/geometry/mesh.cpp
+    impl/geometry/quad.cpp
     impl/geometry/rect.cpp
     impl/geometry/sphere.cpp
     impl/geometry/triangle.cpp
@@ -55,6 +57,8 @@ source_group (geometry
     FILES
     public/geometry/mesh.h
     impl/geometry/mesh.cpp
+    public/geometry/quad.h
+    impl/geometry/quad.cpp
     public/geometry/rect.h
     impl/geometry/rect.cpp
     public/geometry/sphere.h
