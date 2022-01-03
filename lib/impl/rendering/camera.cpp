@@ -1,10 +1,16 @@
 #include "rendering/camera.h"
 
+#include <cmath>
 #include "vec3.h"
 
 using namespace mq;
 
 namespace tkr {
+    Frustrum::Frustrum(float fov, float near, float far)
+    :  mNearPlane() {
+
+    }
+
     PerspectiveCamera::PerspectiveCamera(std::shared_ptr<Viewport> viewport,
         const vec3& origin, const vec3& lookAt, float fov,
         float near, float far, const vec3& up)
@@ -19,7 +25,7 @@ namespace tkr {
 
     Ray rayThroughPixel(int row, int column) const
     {
-        return Ray(vec3::zero(), vec3{1.f, 0.f, 0.f});
+        return Ray(vec3::zero(), vec3{1.f, 0.f, 0.f}); 
     }
     
 } // namespace tkr

@@ -5,11 +5,21 @@
 
 #include <memory>
 
+#include "geometry/rect.h"
 #include "rendering/ray.h"
 #include "rendering/viewport.h"
 #include "vec3.h"
 
 namespace tkr {
+    class Frustrum() {
+    public:
+        Frustrum(float fov, float near, float far);
+
+    private:
+        Rect mNearPlane;
+        Rect mFarPlane;
+    };
+
     class PerspectiveCamera {
     public:
         PerspectiveCamera(std::shared_ptr<Viewport> viewport, 
