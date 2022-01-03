@@ -17,6 +17,8 @@ Image PathTracer::renderToImage() const
 
     for (int yi = 0; yi < height; ++yi) {
         for (int xj = 0; xj < width; ++xj) {
+            const auto ray = mCamera->rayThroughPixel(yi, xj);
+
             const auto pixelValue = static_cast<char>(255 * static_cast<int>(std::floor(yi / height)));
             img.setPixel(yi, xj, pixelValue);
         }
