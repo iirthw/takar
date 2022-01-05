@@ -23,9 +23,9 @@ namespace tkr {
     , mUp(up)
     {}
 
-    Ray rayThroughPixel(int row, int column) const
+    Ray PerspectiveCamera::rayThroughPixel(int row, int column) const
     {
-        return Ray(vec3::zero(), vec3{1.f, 0.f, 0.f}); 
+        return Ray(vec3::getZero(), vec3{1.f, 0.f, 0.f}); 
     }
     
 } // namespace tkr
