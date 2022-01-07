@@ -6,7 +6,7 @@
 using namespace mq;
 
 namespace tkr {
-    Frustrum::Frustrum(float fov, float near, float far)
+    Frustum::Frustum(float fov, float near, float far)
     :  mNearPlane() {
 
     }

@@ -11,9 +11,9 @@
 #include "vec3.h"
 
 namespace tkr {
-    class Frustrum {
+    class Frustum {
     public:
-        Frustrum(float fov, float near, float far);
+        Frustum(float fov, float near, float far);
 
     private:
         Rect mNearPlane;
