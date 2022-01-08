@@ -9,6 +9,7 @@ include_directories (${OPENGL_INCLUDE_DIRS})
 
 set (HEADER_FILES 
      # geometry
+     public/geometry/bounding_box.h
 	 public/geometry/mesh.h
      public/geometry/rect.h
      public/geometry/quad.h
@@ -55,6 +56,7 @@ source_group (TakarEngine
 
 source_group (geometry
     FILES
+    public/geometry/bounding_box.h
     public/geometry/mesh.h
     impl/geometry/mesh.cpp
     public/geometry/quad.h

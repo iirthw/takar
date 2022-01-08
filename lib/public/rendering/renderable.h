@@ -8,5 +8,7 @@ namespace tkr
     {
     public:
         virtual bool rayIntersect(const Ray& ray) const = 0;
+
+        
     }; // class Renderable
 } // namespace tkr
