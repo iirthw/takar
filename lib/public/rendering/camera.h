@@ -8,6 +8,7 @@
 #include "geometry/rect.h"
 #include "rendering/ray.h"
 #include "rendering/viewport.h"
+#include "mat.h"
 #include "vec3.h"
 
 namespace tkr {
@@ -18,6 +19,10 @@ namespace tkr {
     private:
         Rect mNearPlane;
         Rect mFarPlane;
+    };
+
+    class Projection {
+        static mq::mat4 perspective(float fovy, float aspect, float near, float far);
     };
 
     class PerspectiveCamera {
