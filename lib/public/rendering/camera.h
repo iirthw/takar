@@ -12,25 +12,29 @@
 #include "vec3.h"
 
 namespace tkr {
-    class Frustum {
+    struct Frustum {
     public:
-        Frustum(float fov, float near, float far);
+        Frustum(float fovy, float aspect, float near, float far);
+
+        float fovx() const { return mFovy * mAspect; }
+        float fovy() const { return mFovy; }
 
     private:
-        Rect mNearPlane;
-        Rect mFarPlane;
-    };
+        float mFovy;
+        float mAspect;
+        float mNear;
+        float mFar;
+    }; // struct Frustrum
 
     class Projection {
         static mq::mat4 perspective(float fovy, float aspect, float near, float far);
-    };
+    }; // class Projection
 
     class PerspectiveCamera {
     public:
         PerspectiveCamera(std::shared_ptr<Viewport> viewport, 
             const mq::vec3& origin, const mq::vec3& lookAt,
-            float fov = M_PI / 4, float near = 1, float far = 1024, 
-            const mq::vec3& up = mq::vec3(0.0f, 1.0f, 0.0f));
+            Frustum frustum, const mq::vec3& up = mq::vec3(0.0f, 1.0f, 0.0f));
 
         Ray rayThroughPixel(int row, int column) const;
 
@@ -45,11 +49,11 @@ namespace tkr {
     private:
         std::shared_ptr<Viewport> mViewport;
         mq::vec3 mOrigin;
-        mq::vec3 mLookAt;
-        float mFov;
-        float mNear;
-        float mFar;
+        mq::vec3 mLookAt;        
+        mq::vec3 mRight;
         mq::vec3 mUp;
-    }; // class Camera
+        Frustum mFrustum;
+        Rect mNearPlane;
+    }; // class PerspectiveCamera
 
 } // namespace tkr
