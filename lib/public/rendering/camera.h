@@ -6,6 +6,7 @@
 #include <memory>
 
 #include "geometry/rect.h"
+#include "geometry/quad.h"
 #include "rendering/ray.h"
 #include "rendering/viewport.h"
 #include "mat.h"
@@ -47,13 +48,16 @@ namespace tkr {
         std::shared_ptr<Viewport> viewport() const { return mViewport; }
 
     private:
+        
+        static Rect computeNearPlane(float fovx, float fovy, mq::vec3 lookAt, mq::vec3 right, mq::vec3 up);
+        
         std::shared_ptr<Viewport> mViewport;
         mq::vec3 mOrigin;
         mq::vec3 mLookAt;        
         mq::vec3 mRight;
         mq::vec3 mUp;
         Frustum mFrustum;
-        Rect mNearPlane;
+        Quad<mq::vec3> mNearPlane;
     }; // class PerspectiveCamera
 
 } // namespace tkr
