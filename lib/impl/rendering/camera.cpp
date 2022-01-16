@@ -45,16 +45,29 @@ namespace tkr {
         const vec3& origin, const vec3& lookAt, Frustum frustum, const vec3& up)
     : mViewport(viewport)
     , mOrigin(origin)
-    , mLookAt(lookAt)        
-    , mRight(cross(mLookAt, mUp))
-    , mUp(cross(mLookAt, mRight))
+    , mLookAt(normalize(lookAt))
+    , mRight(normalize(cross(mLookAt, up)))
+    , mUp(normalize(cross(mLookAt, mRight)))
     , mFrustum(frustum)
-    , mNearPlane()
+    // r = normalize(r)
+    // l = - tan(mFrustum->fovx() / 2) * len(mLookAt) * normalize(mRight)
+    // u = - tan(mFrustum->fovy() / 2) * len(mLookAt) * normalize(mUp)
+    , mNearPlane(computeNearPlane(mFrustum.fovx(), mFrustum.fovy(), mLookAt, mRight, mUp))
     {}
 
     Ray PerspectiveCamera::rayThroughPixel(int row, int column) const
     {
         return Ray(vec3::getZero(), vec3{1.f, 0.f, 0.f}); 
+    }
+
+    Rect PerspectiveCamera::computeNearPlane(float fovx, float fovy, mq::vec3 lookAt,
+                                             mq::vec3 right, mq::vec3 up)
+    {
+        const auto xtan = tan(fovx / 2);
+        const auto ytan = tan(fovy / 2);
+        
+        return Rect(-xtan * length(lookAt) * normalize(right),
+                    );
     }
     
 } // namespace tkr
