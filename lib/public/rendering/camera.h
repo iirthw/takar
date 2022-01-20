@@ -53,9 +53,9 @@ namespace tkr {
         
         std::shared_ptr<Viewport> mViewport;
         mq::vec3 mOrigin;
-        mq::vec3 mLookAt;        
-        mq::vec3 mRight;
-        mq::vec3 mUp;
+        mq::vec3 mLookAt;   // ORDER dependency.
+        mq::vec3 mRight;    // ORDER dependency.
+        mq::vec3 mUp;       // ORDER dependency.
         Frustum mFrustum;
         Quad<mq::vec3> mNearPlane;
     }; // class PerspectiveCamera
