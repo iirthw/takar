@@ -4,7 +4,7 @@ namespace tkr {
     template<typename T>
     class Quad {
     public:
-        Quad(T p0, T p1, T p2, T p3);
+        Quad(const T& p0, const T& p1, const T& p2, T p3);
 
     private:
         T mPoints[4];
