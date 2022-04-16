@@ -63,6 +63,7 @@ namespace tkr {
     Rect PerspectiveCamera::computeNearPlane(float fovx, float fovy, mq::vec3 lookAt,
                                              mq::vec3 right, mq::vec3 up)
     {
+        // FIXME: provide impl
         const auto xtan = tan(fovx / 2);
         const auto ytan = tan(fovy / 2);
         
